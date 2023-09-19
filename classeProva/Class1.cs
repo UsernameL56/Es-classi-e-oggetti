@@ -8,28 +8,32 @@ namespace classeProva
 {
     public class Class1
     {
-        public class Prodotto
+        
+    }
+    public class Prodotto
+    {
+        //attributi
+        private string nome;
+        private double prezzo;
+
+
+        public (string, double) Ris()
         {
-            //attributi
-            private string nome;
-            private double prezzo;
+            return (nome, prezzo);
+        }
 
+        // costruttore vuoto
+        public Prodotto() 
+        {
+            nome = "";
+            prezzo= 0;
+        }
 
-            public (string, double) Ris()
-            {
-
-                return (nome, prezzo);
-            }
-
-            // costruttore vuoto
-            public Prodotto() { }
-
-            // costruttore
-            public Prodotto(string nomeVal, double prezzoVal)
-            {
-                nome = nomeVal;
-                prezzo = prezzoVal;
-            }
+        // costruttore
+        public Prodotto(string nomeVal, double prezzoVal)
+        {
+            nome = nomeVal;
+            prezzo = prezzoVal;
         }
     }
 }
