@@ -25,15 +25,33 @@ namespace classeProva
         // costruttore vuoto
         public Prodotto() 
         {
-            nome = "";
-            prezzo= 0;
+            setNome("");
+            setPrezzo(0);
         }
 
-        // costruttore
         public Prodotto(string nomeVal, double prezzoVal)
         {
-            nome = nomeVal;
+            setNome(nomeVal);
+            setPrezzo(prezzoVal);
+        }
+
+        public void setNome(string nomeVal)
+        {
+            nome = nomeVal.ToUpper();
+        }
+        
+        public void setPrezzo(double prezzoVal)
+        {
             prezzo = prezzoVal;
+        }
+
+        public string getNome()
+        {
+            return nome;
+        }
+        public void getPrezzo()
+        {
+            return prezzo;
         }
     }
 }
